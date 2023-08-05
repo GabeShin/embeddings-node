@@ -20,6 +20,7 @@
   "homepage": "https://github.com/GabeShin/embeddings-node#readme",
   "dependencies": {
     "@huggingface/inference": "^2.6.1",
+    "@xenova/transformers": "^2.5.0",
     "dotenv": "^16.3.1"
   }
 }

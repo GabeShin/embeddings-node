@@ -1,5 +1,7 @@
 import { HfInference } from "@huggingface/inference";
 import {config} from 'dotenv'
+import { pipeline } from '@xenova/transformers';
+
 
 config({path: '.env.local'})
 
@@ -17,7 +19,7 @@ function dotProduct(numA, numB) {
   return result;
 }
 
-async function main() {
+async function huggingface_embedding() {
   const hf = new HfInference(process.env.HUGGING_FACE_TOKEN);
 
   const output = await hf.featureExtraction({
@@ -35,4 +37,15 @@ async function main() {
   console.log(similarity);
 }
 
-main();
+async function transformer_embedding() {
+  let extractor = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2');
+
+  let output = await extractor('This is a simple test.', { pooling: 'mean', normalize: true });
+  let output_2 = await extractor('This is a very easy test.', { pooling: 'mean', normalize: true });
+
+  const similarity = dotProduct(output.data, output_2.data); 
+  console.log(similarity);
+}
+
+transformer_embedding();
+ 
