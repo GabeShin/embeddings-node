@@ -1,0 +1,25 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  '@huggingface/inference':
+    specifier: ^2.6.1
+    version: 2.6.1
+  dotenv:
+    specifier: ^16.3.1
+    version: 16.3.1
+
+packages:
+
+  /@huggingface/inference@2.6.1:
+    resolution: {integrity: sha512-qFYchgOCPeEkZJKiSr7Kz62QwukJtgkeQCT7Q0SSKUcvHpTQVNJp6i/JrJMR4dBdzQysJ1SZDC0pLBBnnskTag==}
+    engines: {node: '>=18'}
+    dev: false
+
+  /dotenv@16.3.1:
+    resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
+    engines: {node: '>=12'}
+    dev: false

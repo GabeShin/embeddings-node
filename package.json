@@ -1,0 +1,25 @@
+{
+  "name": "embeddings-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabeShin/embeddings-node.git"
+  },
+  "author": "Gabe Shin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabeShin/embeddings-node/issues"
+  },
+  "homepage": "https://github.com/GabeShin/embeddings-node#readme",
+  "dependencies": {
+    "@huggingface/inference": "^2.6.1",
+    "dotenv": "^16.3.1"
+  }
+}
